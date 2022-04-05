@@ -1,0 +1,145 @@
+package PraktikumPBO;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CPNS {
+    public static void main(String[] args){
+        ArrayList<String> nama = new ArrayList<>();
+        ArrayList<String> agama = new ArrayList<>();
+        ArrayList<String> jenis_kelamin = new ArrayList<>();
+        ArrayList<String> alamat = new ArrayList<>();
+        ArrayList<Long> nik = new ArrayList<>();
+        ArrayList<Long> no_telp = new ArrayList<>();
+
+        int pilih;
+        Scanner scan = new Scanner(System.in);
+
+        do {
+            System.out.println("----------------");
+            System.out.println("Data CPNS");
+            System.out.println("----------------");
+            System.out.println("1. Tambah data CPNS");
+            System.out.println("2. Tampilkan data CPNS");
+            System.out.println("3. Ubah data CPNS");
+            System.out.println("4. Hapus data CPNS");
+            System.out.println("5. Keluar");
+            System.out.print("Pilih sesuai angka diatas: ");
+            pilih = scan.nextInt();
+            if (pilih == 1){
+                Scanner scancreate = new Scanner(System.in);
+                String scanstr;
+                long scanint;
+
+                System.out.println("Menu Tambah Data CPNS");
+                System.out.print("Masukkan Nama : ");
+                scanstr = scancreate.nextLine();
+                nama.add(scanstr);
+                System.out.print("Masukkan Agama : ");
+                scanstr = scancreate.nextLine();
+                agama.add(scanstr);
+                System.out.print("Masukkan Jenis Kelamin : ");
+                scanstr = scancreate.nextLine();
+                jenis_kelamin.add(scanstr);
+                System.out.print("Masukkan Alamat : ");
+                scanstr = scancreate.nextLine();
+                alamat.add(scanstr);
+                System.out.print("Masukkan NIK : ");
+                scanint = scancreate.nextLong();
+                nik.add(scanint);
+                System.out.print("Masukkan No Telepon : ");
+                scanint = scancreate.nextLong();
+                no_telp.add(scanint);
+                System.out.println("Data Berhasil Ditambahkan!");
+            }if (pilih == 2){
+                System.out.println("Menu Tampilkan Data CPNS");
+                if(nama.isEmpty()) System.out.println("Data Kosong!");
+                else {
+                    for(int i = 0; i < nama.size(); i++) {
+                        System.out.println("=======================================");
+                        System.out.println("Data ke-" + (i+1));
+                        System.out.println("Nama          : " + nama.get(i));
+                        System.out.println("Agama         : " + agama.get(i));
+                        System.out.println("Jenis Kelamin : " + jenis_kelamin.get(i));
+                        System.out.println("Alamat        : " + alamat.get(i));
+                        System.out.println("NIK           : " + nik.get(i));
+                        System.out.println("No Telepon    : " + no_telp.get(i));
+                        System.out.println("=======================================");
+                    }                    
+                }
+            }if (pilih == 3){
+                Scanner input = new Scanner(System.in);
+                Scanner scanupdate = new Scanner(System.in);
+                String scanstr;
+                long scanint;
+        
+                System.out.println("Menu Ubah Data CPNS");
+                if(nama.isEmpty()) System.out.println("Data Kosong!");
+                else {
+                    for(int i = 0; i < nama.size(); i++) {
+                        System.out.println("=======================================");
+                        System.out.println("Data ke-" + (i+1));
+                        System.out.println("Nama          : " + nama.get(i));
+                        System.out.println("Agama         : " + agama.get(i));
+                        System.out.println("Jenis Kelamin : " + jenis_kelamin.get(i));
+                        System.out.println("Alamat        : " + alamat.get(i));
+                        System.out.println("NIK           : " + nik.get(i));
+                        System.out.println("No Telepon    : " + no_telp.get(i));
+                        System.out.println("=======================================");
+                    }                    
+                }
+                System.out.print("Masukkan Nomor Data yang ingin diubah: ");
+                int no = input.nextInt();
+                System.out.print("Masukkan Nama : ");
+                scanstr = scanupdate.nextLine();
+                nama.set(no-1, scanstr);
+                System.out.print("Masukkan Agama : ");
+                scanstr = scanupdate.nextLine();
+                agama.set(no-1, scanstr);
+                System.out.print("Masukkan Jenis Kelamin : ");
+                scanstr = scanupdate.nextLine();
+                jenis_kelamin.set(no-1, scanstr);
+                System.out.print("Masukkan Alamat : ");
+                scanstr = scanupdate.nextLine();
+                alamat.set(no-1, scanstr);
+                System.out.print("Masukkan NIK : ");
+                scanint = scanupdate.nextLong();
+                nik.set(no-1, scanint);
+                System.out.print("Masukkan No Telepon : ");
+                scanint = scanupdate.nextLong();
+                no_telp.set(no-1, scanint);
+                System.out.println("Data Berhasil Diubah!");                
+            }if (pilih == 4){
+                System.out.println("Menu Hapus Data CPNS");
+                Scanner input = new Scanner(System.in);
+        
+                System.out.println("Menu Ubah Data CPNS");
+                if(nama.isEmpty()) System.out.println("Data Kosong!");
+                else {
+                    for(int i = 0; i < nama.size(); i++) {
+                        System.out.println("=======================================");
+                        System.out.println("Data ke-" + (i+1));
+                        System.out.println("Nama          : " + nama.get(i));
+                        System.out.println("Agama         : " + agama.get(i));
+                        System.out.println("Jenis Kelamin : " + jenis_kelamin.get(i));
+                        System.out.println("Alamat        : " + alamat.get(i));
+                        System.out.println("NIK           : " + nik.get(i));
+                        System.out.println("No Telepon    : " + no_telp.get(i));
+                        System.out.println("=======================================");
+                    }
+                }
+                System.out.print("Masukkan Nomor Data yang ingin dihapus: ");
+                int no = input.nextInt();
+                nama.remove(no-1);
+                agama.remove(no-1);
+                jenis_kelamin.remove(no-1);
+                alamat.remove(no-1);
+                nik.remove(no-1);
+                no_telp.remove(no-1);
+                System.out.println("Data Berhasil Dihapus!");
+            }if (pilih == 5){
+                System.out.println("Terima Kasih");
+            }
+        } while(pilih != 5);      
+    }
+}
