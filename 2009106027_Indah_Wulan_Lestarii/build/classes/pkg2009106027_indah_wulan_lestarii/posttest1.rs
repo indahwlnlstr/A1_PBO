@@ -1,2 +1,0 @@
-pkg2009106027_indah_wulan_lestarii.data
-pkg2009106027_indah_wulan_lestarii.posttest1

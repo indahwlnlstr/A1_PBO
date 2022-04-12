@@ -1,5 +1,5 @@
 
-package pkg2009106027_indah_wulan_lestarii;
+package pertemuan1;
 
 import java.util.ArrayList;
 import java.util.Collection;
