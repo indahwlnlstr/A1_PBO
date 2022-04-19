@@ -75,13 +75,13 @@ public static void inputdata() throws IOException{
         System.out.println("DATA YANG ANDA MASUKKAN SALAH");
         return;
     }
-        Barang baru = new Barang (kodeBarang, namaBarang, hargaBarang, Bahan);
-        baru.kodeBarang = kodeBarang;
-        baru.namaBarang = namaBarang;
-        baru.hargaBarang = hargaBarang;
-        baru.Bahan = Bahan;
-        barang.add(baru);
-        baru.inputdata();
+        Barang Abaru = new Barang (kodeBarang, namaBarang, hargaBarang, Bahan);
+        Abaru.kodeBarang = kodeBarang;
+        Abaru.namaBarang = namaBarang;
+        Abaru.hargaBarang = hargaBarang;
+        Abaru.Bahan = Bahan;
+        barang.add(Abaru);
+        Abaru.inputdata();
 }           
 
    public static void lihatdata()throws IOException{

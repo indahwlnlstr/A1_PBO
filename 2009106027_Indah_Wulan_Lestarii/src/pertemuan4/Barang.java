@@ -1,10 +1,10 @@
-package pertemuan3;
+package pertemuan4;
 
-class Barang {
-    String kodeBarang;
-    String namaBarang;
-    int hargaBarang;
-    String Bahan;
+public class Barang {
+    protected String kodeBarang;
+    protected String namaBarang;
+    protected int hargaBarang;
+    protected String Bahan;
     
     public Barang(String kodeBarang, String namaBarang, int hargaBarang, String Bahan){
         this.kodeBarang = kodeBarang;
@@ -44,6 +44,20 @@ class Barang {
     public void setBahan(String Bahan) {
         this.Bahan = Bahan;
     }
+
+    @Override
+    public String toString() {
+        return "Barang{" + "kodeBarang=" + kodeBarang + ", namaBarang=" + namaBarang + ", hargaBarang=" + hargaBarang + ", Bahan=" + Bahan + '}';
+    }
+    
+    
+    
+    void tampilan(){
+        System.out.println("Kode Barang : " + this.kodeBarang);
+        System.out.println("Nama Barang : " + this.namaBarang);
+        System.out.println("Harga       : " + this.hargaBarang);
+        System.out.println("Bahan       : " + this.Bahan);
+    }
     
     void inputdata(){
         System.out.println("Data Berhasil ditambahkan");
@@ -53,5 +67,5 @@ class Barang {
     }
     void hapusdata(){
         System.out.println("Data berhasil dihapus");
-    }      
+    }    
 }

@@ -1,4 +1,4 @@
-package pertemuan3;
+package pertemuan4;
 import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -18,9 +18,9 @@ static ArrayList<Barang> barang = new ArrayList<Barang>();
        InputStreamReader home = new InputStreamReader(System.in);
        BufferedReader input = new BufferedReader(home);
             System.out.println("********************************");
-            System.out.println("*    MENU PERLENGKAPAN BAYI    *");
+            System.out.println("*         MENU BARANG          *");
             System.out.println("********************************");
-            System.out.println("* 1. Tambah Data               *");
+            System.out.println("* 1. Tambah Data                *");
             System.out.println("* 2. Lihat Data                *"); 
             System.out.println("* 3. Edit Data                 *");
             System.out.println("* 4. Hapus Data                *");
@@ -75,13 +75,13 @@ public static void inputdata() throws IOException{
         System.out.println("DATA YANG ANDA MASUKKAN SALAH");
         return;
     }
-        Barang baru = new Barang (kodeBarang, namaBarang, hargaBarang, Bahan);
-        baru.kodeBarang = kodeBarang;
-        baru.namaBarang = namaBarang;
-        baru.hargaBarang = hargaBarang;
-        baru.Bahan = Bahan;
-        barang.add(baru);
-        baru.inputdata();
+        Barang Abaru = new Barang (kodeBarang, namaBarang, hargaBarang, Bahan);
+        Abaru.kodeBarang = kodeBarang;
+        Abaru.namaBarang = namaBarang;
+        Abaru.hargaBarang = hargaBarang;
+        Abaru.Bahan = Bahan;
+        barang.add(Abaru);
+        Abaru.inputdata();
 }           
 
    public static void lihatdata()throws IOException{
