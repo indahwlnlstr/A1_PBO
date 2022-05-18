@@ -1,10 +1,10 @@
 package pertemuan4;
 
 public class Barang {
-    protected String kodeBarang;
-    protected String namaBarang;
-    protected int hargaBarang;
-    protected String Bahan;
+    public String kodeBarang;
+    public String namaBarang;
+    public int hargaBarang;
+    public String Bahan;
     
     public Barang(String kodeBarang, String namaBarang, int hargaBarang, String Bahan){
         this.kodeBarang = kodeBarang;
